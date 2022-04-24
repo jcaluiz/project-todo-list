@@ -8,8 +8,17 @@ function caixaDeTextoNaLista() {
     ol.appendChild(createList);
     createList.innerText = input.value;
     input.value = '';
+    createList.classList = 'list';
+    let list = document.getElementsByClassName('list');
+  
     createList.addEventListener('click', function () {
-      createList.classList.add('back-color')
+      if(createList.classList.contains('list'))
+      for(let index = 0; index < list.length; index += 1){
+        list[index].classList.remove('back-color')
+      }
+      if (createList.classList.contains('list')) {
+        createList.classList.add('back-color')
+      }
     })
   })
 
