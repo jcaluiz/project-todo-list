@@ -20,8 +20,18 @@ function caixaDeTextoNaLista() {
         createList.classList.add('back-color')
       }
     })
+    let completed = document.getElementsByClassName('completed');
+    createList.addEventListener('dblclick', function() {
+      if (createList.classList.contains('completed')) {
+        createList.classList.remove('completed');
+      }
+      else {
+        createList.classList.add('completed');
+      }
+      
+    })
   })
 
 }
-
 caixaDeTextoNaLista();
+
