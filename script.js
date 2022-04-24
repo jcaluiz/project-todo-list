@@ -20,6 +20,7 @@ function caixaDeTextoNaLista() {
         createList.classList.add('back-color')
       }
     })
+    
     let completed = document.getElementsByClassName('completed');
     createList.addEventListener('dblclick', function() {
       if (createList.classList.contains('completed')) {
@@ -29,9 +30,17 @@ function caixaDeTextoNaLista() {
         createList.classList.add('completed');
       }
     })
+    
     let buttonRemove = document.querySelector('#apaga-tudo');
     buttonRemove.addEventListener('click', function() {
       ol.removeChild(createList);
+    })
+
+    let buttonRemoveCompleted = document.querySelector('#remover-finalizados');
+    buttonRemoveCompleted.addEventListener('click', function() {
+      if(createList.classList.contains('completed')) {
+        ol.removeChild(createList);
+      }
     })
   })
 
