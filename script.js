@@ -28,10 +28,12 @@ function caixaDeTextoNaLista() {
       else {
         createList.classList.add('completed');
       }
-      
+    })
+    let buttonRemove = document.querySelector('#apaga-tudo');
+    buttonRemove.addEventListener('click', function() {
+      ol.removeChild(createList);
     })
   })
 
 }
 caixaDeTextoNaLista();
-
