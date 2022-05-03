@@ -31,9 +31,11 @@ function caixaDeTextoNaLista() {
     })
 
     let buttonRemove = document.querySelector('#apaga-tudo');
-    buttonRemove.addEventListener('click', function () {
-      ol.removeChild(createList);
-      localStorage.clear();
+    buttonRemove.addEventListener('click', function() {
+      for(let index = 0; index < list.length; index += 1) {
+        ol.removeChild(list[index]);
+
+      }
     })
 
     let buttonRemoveCompleted = document.querySelector('#remover-finalizados');
@@ -148,4 +150,3 @@ function voltaTudo () {
 voltaTudo()
 
 
-// index + conta
